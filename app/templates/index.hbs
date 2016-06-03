@@ -1,6 +1,33 @@
+<style>
+  .leaflet-container {
+    width: 600px;
+    height: 300px;
+  }
+
+  .strong {
+    font-weight: 'bold';
+  }
+</style>
+
 <div class="container">
   <!-- Example row of columns -->
-  <div class="row">
+  <div class="row" style="margin-top: 80px;">
+    <div class="col-md-12">
+
+      {{!-- TODO: Get this out of here --}}
+      {{#leaflet-map lat=currentLatitude lng=currentLongitude zoom=currentZoom}}
+        {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+        {{#each model.escuelas as |escuela|}}
+          {{#marker-layer lat=escuela.latitude lng=escuela.longitude}}
+            <h3>{{escuela.Institution}}</h3>
+          {{/marker-layer}}
+        {{/each}}
+      {{/leaflet-map}}
+    </div>
+  </div>
+
+  <div class="row" style="margin-top: 20px;">
     <div class="col-md-12">
       <table class="table">
         <tr>
@@ -8,7 +35,7 @@
         </tr>
         {{#each model.escuelas as |escuela|}}
           <tr>
-            <td>{{escuela.Institution}} ({{escuela.longitude}}, {{escuela.latitude}})</td>
+            <td><span onclick={{action 'pickEscuela' escuela}}>{{escuela.Institution}} ({{escuela.latitude}}, {{escuela.longitude}})</span></td>
           </tr>
         {{/each}}
       </table>
