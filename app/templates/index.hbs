@@ -5,7 +5,7 @@
   }
 
   .strong {
-    font-weight: 'bold';
+    font-weight: bold;
   }
 </style>
 
@@ -35,7 +35,15 @@
         </tr>
         {{#each model.escuelas as |escuela|}}
           <tr>
-            <td><span onclick={{action 'pickEscuela' escuela}}>{{escuela.Institution}} ({{escuela.latitude}}, {{escuela.longitude}})</span></td>
+            <td>
+              {{#escuela-map-spot spotItem=escuela currentItem=currentEscuela}}
+                <span
+                  onclick={{action 'pickEscuela' escuela}}
+                >
+                  {{escuela.Institution}} ({{escuela.latitude}}, {{escuela.longitude}})
+                </span>
+              {{/escuela-map-spot}}
+            </td>
           </tr>
         {{/each}}
       </table>
