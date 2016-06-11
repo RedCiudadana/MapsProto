@@ -8,6 +8,18 @@ export default Ember.Controller.extend({
   currentDepartamento: null,
   currentSearch: null,
 
+  // departamentos: Ember.A([
+  //   'Guatemala',
+  //   'El Progreso',
+  //   'Alta Verapaz',
+  //   'Huehuetenango'
+  // ]),
+  
+  departamentos: {
+    'dude': 'sup',
+    'dude2': 'sup2'
+  },
+
   currentEscuelas: Ember.computed('currentDepartamento', 'currentSearch', function() {
     let escuelas = this.get('model').escuelas;
 

@@ -18,41 +18,12 @@
 <div style=" height:71px; width:100%; background-color:#357a81; ">
   <div style="margin:0 auto; width:73%;">
     <div class="dropdown">
-      <select class="dropdown-select" name="estado" id="estado">
-        <option value="0">Todos los Estados</option>
-        <option value="1">AGUASCALIENTES</option>
-        <option value="2">BAJA CALIFORNIA</option>
-        <option value="3">BAJA CALIFORNIA SUR</option>
-        <option value="4">CAMPECHE</option>
-        <option value="5">COAHUILA DE ZARAGOZA</option>
-        <option value="6">COLIMA</option>
-        <option value="7">CHIAPAS</option>
-        <option value="8">CHIHUAHUA</option>
-        <option value="9">DISTRITO FEDERAL</option>
-        <option value="10">DURANGO</option>
-        <option value="11">GUANAJUATO</option>
-        <option value="12">GUERRERO</option>
-        <option value="13">HIDALGO</option>
-        <option value="14">JALISCO</option>
-        <option value="15">ESTADO DE MEXICO</option>
-        <option value="16">MICHOACAN</option>
-        <option value="17">MORELOS</option>
-        <option value="18">NAYARIT</option>
-        <option value="19">NUEVO LEON</option>
-        <option value="20">OAXACA</option>
-        <option value="21">PUEBLA</option>
-        <option value="22">QUERETARO</option>
-        <option value="23">QUINTANA ROO</option>
-        <option value="24">SAN LUIS POTOSI</option>
-        <option value="25">SINALOA</option>
-        <option value="26">SONORA</option>
-        <option value="27">TABASCO</option>
-        <option value="28">TAMAULIPAS</option>
-        <option value="29">TLAXCALA</option>
-        <option value="30">VERACRUZ</option>
-        <option value="31">YUCATAN</option>
-        <option value="32">ZACATECAS</option>
-      </select>
+      {{one-way-select
+        currentDepartamento
+        options=departamentos
+        update=(action (mut currentDepartamento))
+        classNames="dropdown-select"
+      }}
     </div>
 
     <div style="height:71px; width:63%; background-color:#b4d30c; float:left; color:white; font-size: 14px; padding-left:15px; padding-top:20px; ">
