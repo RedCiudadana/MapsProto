@@ -1,3 +1,234 @@
+/**
+ * estilo2.css
+ */
+
+@charset "utf-8";
+
+/* Reset CSS
+* --------------------------------------- */
+
+*{
+  margin:0;
+  padding:0;
+}
+
+@media only screen and (min-width : 480px) {
+  body {
+    background-color:#1db98f;
+  }
+}
+
+
+@media only screen and (min-width : 768px) {
+
+  body {
+    background-color: #1db98f;
+  }
+
+  .top0 {
+    width: 1007px;
+    float: left;
+  }
+
+  .top1 {
+    float: left;
+    width: 170px;
+    height: 70px;
+  }
+
+  .top2 {
+    float: left;
+    width: 220px;
+    height: 70px;
+  }
+
+  .top3 {
+    float: left;
+    width: 230px;
+    height: 70px;
+  }
+
+  .top3a {
+    padding-left: 20px;
+  }
+
+  .top4 {
+    z-index: 999;
+    left: 360px;
+    top: 8px;
+    float: left;
+    width: 200px;
+  }
+
+  .medium {
+    width: 1007px;
+    height: 548px;
+    /*float:left;*/
+  }
+
+  .left0 {
+    width: 170px;
+    height: 548px;
+    float: left;
+    margin-top: -70px;
+  }
+
+  .left1 {
+    width: 170px;
+  }
+
+  .left2 {
+    width: 170px;
+  }
+
+  .right0 {
+    width:630px;
+    float:left;
+  }
+
+  .right1 {
+    width: 100%;
+    height: 348px;
+  } 
+
+  .down {
+    width: 810px;
+    float: left;
+    margin-top: -190px;
+  }
+
+  .down1 {
+    float: left;
+    width: 100px;
+  }
+
+  .down2 {
+    float: left;
+    width: 540px;
+    background-image: url(../img/rango.jpg);
+    background-repeat: no-repeat;
+    padding-left: 158px;
+    padding-top: 5px;
+    position: relative;
+    height: 50px;
+  }
+
+  #alumnos {
+    background-position: top center;
+    background-repeat: no-repeat;
+    width: 330px;
+    margin-left: 185px;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  body {
+    background-color: #1db98f;
+  }
+
+  .top0 {
+    width: 1007px;
+    float: left;
+  }
+
+  .top1 {
+    float: left;
+    width: 170px;
+    height: 70px;
+  }
+
+  .top2 {
+    float: left;
+    width: 220px;
+    height: 70px;
+  }
+
+  .top3 {
+    float: left;
+    width: 230px;
+    height: 70px;
+  }
+
+  .top3a {
+   padding-left: 20px;
+  }
+
+  .top4 {
+    z-index: 999;
+    width: 360px;
+    left: 360px;
+    top: 8px;
+    float: left;
+  }
+
+  .medium {
+    width: 1007px;
+    height: 548px;
+    /*float:left;*/
+  }
+
+  .left0 {
+    width: 170px;
+    height: 548px;
+    float: left;
+    margin-top: 0px;
+  }
+
+  .left1 {
+    width: 170px;
+  }
+
+  .left2 {
+    width: 170px;
+  }
+
+  .right0 {
+    width:810px;
+    float:left;
+  }
+
+  .right1 {
+    width: 100%;
+    height: 548px;
+  }
+
+  .down {
+    width: 1007px;
+    float: left;
+    margin-top: -40px;
+  }
+
+  .down1 {
+    float: left;
+    width: 170px;
+    height: 100px;
+  }
+
+  .down2 {
+    float:left;
+    width: 400px;
+    height:100px;
+    background-image:url(../img/rango.jpg);
+    background-position:left;
+    background-repeat:no-repeat;
+    padding-left: 310px;
+    padding-top: 60px;
+  }
+
+  #alumnos {
+   left: 691px;
+   background-position: top center;
+   background-repeat: no-repeat;
+   margin: 0 auto;
+   width: 330px;
+  }
+
+}
+
+/**
+ * css_ptp.css
+ */
+
 @charset "utf-8";
 
 /* CSS Document */
