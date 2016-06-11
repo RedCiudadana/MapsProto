@@ -70,8 +70,216 @@
 </div>
 
 <div class="medium" style=" height:720px; width:100%; background-color:#F4F4F4; margin:0 auto; ">
+
   {{!-- TODO: Agregar mapa --}}
   {{#leaflet-map lat=currentLatitude lng=currentLongitude zoom=currentZoom classNames="right1"}}
     {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
   {{/leaflet-map}}
+
+  <div>
+    <div style=" margin:0 auto; width:75%">
+      <div style=" height:50px; ">
+        <div class="dropdown dropdown-dark" style="background-color:#5dd397">
+          <select class="dropdown-select" style="height:50px; " name="ramo" id="ramo">
+            <option value="0">Selecciona un ramo</option>
+            <option value="8">AGRICULTURA, GANADERÍA, DESARROLLO RURAL, PESCA Y ALIMENTACIÓN</option>
+            <option value="53">COMISIÓN FEDERAL DE ELECTRICIDAD</option>
+            <option value="9">COMUNICACIONES Y TRANSPORTES</option>
+            <option value="38">CONSEJO NACIONAL DE CIENCIA Y TECNOLOGÍA</option>
+            <option value="7">DEFENSA NACIONAL</option>
+            <option value="20">DESARROLLO SOCIAL</option>
+            <option value="10">ECONOMÍA</option>
+            <option value="11">EDUCACIÓN PÚBLICA</option>
+            <option value="18">ENERGÍA</option>
+            <option value="47">ENTIDADES NO SECTORIZADAS</option>
+            <option value="27">FUNCIÓN PÚBLICA</option>
+            <option value="4">GOBERNACIÓN</option>
+            <option value="6">HACIENDA Y CRÉDITO PÚBLICO</option>
+            <option value="51">INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO</option>
+            <option value="50">INSTITUTO MEXICANO DEL SEGURO SOCIAL</option>
+            <option value="13">MARINA</option>
+            <option value="16">MEDIO AMBIENTE Y RECURSOS NATURALES</option>
+            <option value="52">PETRÓLEOS MEXICANOS</option>
+            <option value="5">RELACIONES EXTERIORES</option>
+            <option value="12">SALUD</option>
+            <option value="32">TRIBUNAL FEDERAL DE JUSTICIA FISCAL Y ADMINISTRATIVA</option>
+            <option value="21">TURISMO</option>
+          </select>
+        </div>
+        <div class="dropdown dropdown-dark">
+          <select class="dropdown-select" style="height:50px" name="unidad" id="unidad">
+            <option value="0">Ejecutor</option>
+            <option value="9_J2Y">ADMINISTRACIÓN PORTUARIA INTEGRAL DE ALTAMIRA, S.A. DE C.V.</option>
+            <option value="9_J3F">ADMINISTRACIÓN PORTUARIA INTEGRAL DE COATZACOALCOS, S.A. DE C.V.</option>
+            <option value="9_J2P">ADMINISTRACIÓN PORTUARIA INTEGRAL DE DOS BOCAS, S.A. DE C.V.</option>
+            <option value="9_J2R">ADMINISTRACIÓN PORTUARIA INTEGRAL DE ENSENADA, S.A. DE C.V.</option>
+            <option value="9_J2Z">ADMINISTRACIÓN PORTUARIA INTEGRAL DE GUAYMAS, S.A. DE C.V.</option>
+            <option value="9_J3A">ADMINISTRACIÓN PORTUARIA INTEGRAL DE LÁZARO CÁRDENAS, S.A. DE C.V.</option>
+            <option value="9_J3B">ADMINISTRACIÓN PORTUARIA INTEGRAL DE MANZANILLO, S.A. DE C.V.</option>
+            <option value="9_J2T">ADMINISTRACIÓN PORTUARIA INTEGRAL DE MAZATLÁN, S.A. DE C.V.</option>
+            <option value="9_J2U">ADMINISTRACIÓN PORTUARIA INTEGRAL DE PROGRESO, S.A. DE C.V.</option>
+            <option value="9_J3C">ADMINISTRACIÓN PORTUARIA INTEGRAL DE PUERTO MADERO, S.A. DE C.V.</option>
+            <option value="9_J2V">ADMINISTRACIÓN PORTUARIA INTEGRAL DE PUERTO VALLARTA, S.A. DE C.V.</option>
+            <option value="9_J3G">ADMINISTRACIÓN PORTUARIA INTEGRAL DE SALINA CRUZ, S.A. DE C.V.</option>
+            <option value="9_J3D">ADMINISTRACIÓN PORTUARIA INTEGRAL DE TAMPICO, S.A. DE C.V.</option>
+            <option value="9_J2W">ADMINISTRACIÓN PORTUARIA INTEGRAL DE TOPOLOBAMPO, S.A. DE C.V.</option>
+            <option value="9_J3E">ADMINISTRACIÓN PORTUARIA INTEGRAL DE VERACRUZ, S.A. DE C.V.</option>
+            <option value="9_KDN">AEROPUERTO INTERNACIONAL DE LA CIUDAD DE MÉXICO, S.A. DE C.V.</option>
+            <option value="9_JZL">AEROPUERTOS Y SERVICIOS AUXILIARES</option>
+            <option value="4_EZN">ARCHIVO GENERAL DE LA NACIÓN</option>
+            <option value="6_G2T">CASA DE MONEDA DE MÉXICO</option>
+            <option value="11_L3P">CENTRO DE ENSEÑANZA TÉCNICA INDUSTRIAL</option>
+            <option value="38_9ZU">CENTRO DE INGENIERÍA Y DESARROLLO INDUSTRIAL</option>
+            <option value="38_90O">CENTRO DE INVESTIGACIONES BIOLÓGICAS DEL NOROESTE, S.C.</option>
+            <option value="38_90S">CENTRO DE INVESTIGACIONES EN ÓPTICA, A.C.</option>
+            <option value="38_90W">CENTRO DE INVESTIGACIONES Y ESTUDIOS SUPERIORES EN ANTROPOLOGÍA SOCIAL</option>
+            <option value="38_90Q">CENTRO DE INVESTIGACIÓN CIENTÍFICA DE YUCATÁN, A.C.</option>
+            <option value="38_9ZW">CENTRO DE INVESTIGACIÓN CIENTÍFICA Y DE EDUCACIÓN SUPERIOR DE ENSENADA, BAJA CALIFORNIA</option>
+            <option value="38_9ZY">CENTRO DE INVESTIGACIÓN EN ALIMENTACIÓN Y DESARROLLO, A.C.</option>
+            <option value="38_90E">CENTRO DE INVESTIGACIÓN EN MATERIALES AVANZADOS, S.C.</option>
+            <option value="38_90K">CENTRO DE INVESTIGACIÓN Y DESARROLLO TECNOLÓGICO EN ELECTROQUÍMICA, S.C.</option>
+            <option value="38_90M">CENTRO DE INVESTIGACIÓN Y DOCENCIA ECONÓMICAS, A.C.</option>
+            <option value="9_621">CENTRO SCT AGUASCALIENTES</option>
+            <option value="9_622">CENTRO SCT BAJA CALIFORNIA</option>
+            <option value="9_623">CENTRO SCT BAJA CALIFORNIA SUR</option>
+            <option value="9_624">CENTRO SCT CAMPECHE</option>
+            <option value="9_627">CENTRO SCT CHIAPAS</option>
+            <option value="9_628">CENTRO SCT CHIHUAHUA</option>
+            <option value="9_625">CENTRO SCT COAHUILA</option>
+            <option value="9_626">CENTRO SCT COLIMA</option>
+            <option value="9_630">CENTRO SCT DURANGO</option>
+            <option value="9_631">CENTRO SCT GUANAJUATO</option>
+            <option value="9_632">CENTRO SCT GUERRERO</option>
+            <option value="9_633">CENTRO SCT HIDALGO</option>
+            <option value="9_634">CENTRO SCT JALISCO</option>
+            <option value="9_636">CENTRO SCT MICHOACÁN</option>
+            <option value="9_637">CENTRO SCT MORELOS</option>
+            <option value="9_635">CENTRO SCT MÉXICO</option>
+            <option value="9_638">CENTRO SCT NAYARIT</option>
+            <option value="9_639">CENTRO SCT NUEVO LEÓN</option>
+            <option value="9_640">CENTRO SCT OAXACA</option>
+            <option value="9_641">CENTRO SCT PUEBLA</option>
+            <option value="9_642">CENTRO SCT QUERÉTARO</option>
+            <option value="9_643">CENTRO SCT QUINTANA ROO</option>
+            <option value="9_644">CENTRO SCT SAN LUIS POTOSÍ</option>
+            <option value="9_645">CENTRO SCT SINALOA</option>
+            <option value="9_646">CENTRO SCT SONORA</option>
+            <option value="9_647">CENTRO SCT TABASCO</option>
+            <option value="9_648">CENTRO SCT TAMAULIPAS</option>
+            <option value="9_649">CENTRO SCT TLAXCALA</option>
+            <option value="9_650">CENTRO SCT VERACRUZ</option>
+            <option value="9_651">CENTRO SCT YUCATÁN</option>
+            <option value="9_652">CENTRO SCT ZACATECAS</option>
+            <option value="12_M7K">CENTROS DE INTEGRACIÓN JUVENIL, A.C.</option>
+            <option value="38_90G">CIATEC, A.C. "CENTRO DE INNOVACIÓN APLICADA EN TECNOLOGÍAS COMPETITIVAS"</option>
+            <option value="53_TVV">COMISIÓN FEDERAL DE ELECTRICIDAD</option>
+            <option value="12_S00">COMISIÓN FEDERAL PARA LA PROTECCIÓN CONTRA RIESGOS SANITARIOS</option>
+            <option value="12_V00">COMISIÓN NACIONAL DE BIOÉTICA</option>
+            <option value="16_B00">COMISIÓN NACIONAL DEL AGUA</option>
+            <option value="16_RHQ">COMISIÓN NACIONAL FORESTAL</option>
+            <option value="38_91A">CORPORACIÓN MEXICANA DE INVESTIGACIÓN EN MATERIALES, S.A. DE C.V.</option>
+            <option value="16_150">DELEGACIÓN FEDERAL EN VERACRUZ</option>
+            <option value="20_VSS">DICONSA, S.A. DE C.V.</option>
+            <option value="5_613">DIRECCIÓN GENERAL DE BIENES INMUEBLES Y RECURSOS MATERIALES</option>
+            <option value="9_210">DIRECCIÓN GENERAL DE CARRETERAS</option>
+            <option value="13_211">DIRECCIÓN GENERAL DE CONSTRUCCIONES NAVALES</option>
+            <option value="7_117">DIRECCIÓN GENERAL DE INGENIEROS</option>
+            <option value="9_510">DIRECCIÓN GENERAL DE PUERTOS</option>
+            <option value="13_311">DIRECCIÓN GENERAL DE RECURSOS HUMANOS</option>
+            <option value="20_411">DIRECCIÓN GENERAL DE RECURSOS MATERIALES</option>
+            <option value="9_712">DIRECCIÓN GENERAL DE RECURSOS MATERIALES</option>
+            <option value="12_512">DIRECCIÓN GENERAL DE RECURSOS MATERIALES Y SERVICIOS GENERALES</option>
+            <option value="16_512">DIRECCIÓN GENERAL DE RECURSOS MATERIALES, INMUEBLES Y SERVICIOS</option>
+            <option value="13_216">DIRECCIÓN GENERAL DE SERVICIOS</option>
+            <option value="9_311">DIRECCIÓN GENERAL DE TRANSPORTE FERROVIARIO Y MULTIMODAL</option>
+            <option value="38_91E">EL COLEGIO DE LA FRONTERA SUR</option>
+            <option value="10_K2N">EXPORTADORA DE SAL, S.A. DE C.V.</option>
+            <option value="6_HBW">FONDO DE GARANTÍA Y FOMENTO PARA LA AGRICULTURA, GANADERÍA Y AVICULTURA</option>
+            <option value="21_W3N">FONDO NACIONAL DE FOMENTO AL TURISMO</option>
+            <option value="9_KDH">GRUPO AEROPORTUARIO DE LA CIUDAD DE MÉXICO, S.A. DE C.V.</option>
+            <option value="12_NBB">HOSPITAL GENERAL "DR. MANUEL GEA GONZÁLEZ"</option>
+            <option value="12_NBD">HOSPITAL GENERAL DE MÉXICO "DR. EDUARDO LICEAGA"</option>
+            <option value="12_NBG">HOSPITAL INFANTIL DE MÉXICO FEDERICO GÓMEZ</option>
+            <option value="27_A00">INSTITUTO DE ADMINISTRACIÓN Y AVALÚOS DE BIENES NACIONALES</option>
+            <option value="38_91Q">INSTITUTO DE ECOLOGÍA, A.C.</option>
+            <option value="7_HXA">INSTITUTO DE SEGURIDAD SOCIAL PARA LAS FUERZAS ARMADAS MEXICANAS</option>
+            <option value="51_GYN">INSTITUTO DE SEGURIDAD Y SERVICIOS SOCIALES DE LOS TRABAJADORES DEL ESTADO</option>
+            <option value="10_K8V">INSTITUTO MEXICANO DE LA PROPIEDAD INDUSTRIAL</option>
+            <option value="18_T0O">INSTITUTO MEXICANO DEL PETRÓLEO</option>
+            <option value="50_GYR">INSTITUTO MEXICANO DEL SEGURO SOCIAL</option>
+            <option value="9_A00">INSTITUTO MEXICANO DEL TRANSPORTE</option>
+            <option value="12_NBV">INSTITUTO NACIONAL DE CANCEROLOGÍA</option>
+            <option value="12_NCG">INSTITUTO NACIONAL DE CIENCIAS MÉDICAS Y NUTRICIÓN SALVADOR ZUBIRÁN</option>
+            <option value="12_NCD">INSTITUTO NACIONAL DE ENFERMEDADES RESPIRATORIAS ISMAEL COSÍO VILLEGAS</option>
+            <option value="11_MDE">INSTITUTO NACIONAL DE LA INFRAESTRUCTURA FÍSICA EDUCATIVA</option>
+            <option value="12_NCH">INSTITUTO NACIONAL DE MEDICINA GENÓMICA</option>
+            <option value="12_NCZ">INSTITUTO NACIONAL DE PEDIATRÍA</option>
+            <option value="12_NDF">INSTITUTO NACIONAL DE REHABILITACIÓN LUIS GUILLERMO IBARRA IBARRA</option>
+            <option value="38_91W">INSTITUTO POTOSINO DE INVESTIGACIÓN CIENTÍFICA Y TECNOLÓGICA, A.C.</option>
+            <option value="12_NEF">LABORATORIOS DE BIOLÓGICOS Y REACTIVOS DE MÉXICO, S.A. DE C.V.</option>
+            <option value="11_MGC">PATRONATO DE OBRAS E INSTALACIONES DEL INSTITUTO POLITÉCNICO NACIONAL</option>
+            <option value="52_T9N">PEMEX CORPORATIVO</option>
+            <option value="52_T9J">PEMEX ETILENO</option>
+            <option value="52_T9G">PEMEX EXPLORACIÓN Y PRODUCCIÓN</option>
+            <option value="52_T9I">PEMEX FERTILIZANTES</option>
+            <option value="52_T9K">PEMEX LOGÍSTICA</option>
+            <option value="52_T9M">PEMEX TRANSFORMACIÓN INDUSTRIAL</option>
+            <option value="4_L00">POLICÍA FEDERAL</option>
+            <option value="4_D00">PREVENCIÓN Y READAPTACIÓN SOCIAL</option>
+            <option value="8_B00">SERVICIO NACIONAL DE SANIDAD, INOCUIDAD Y CALIDAD AGROALIMENTARIA</option>
+            <option value="11_600">SUBSECRETARÍA DE EDUCACIÓN MEDIA SUPERIOR</option>
+            <option value="32_110">TRIBUNAL FEDERAL DE JUSTICIA FISCAL Y ADMINISTRATIVA CON SEDE EN LA CIUDAD DE MÉXICO</option>
+            <option value="8_A1I">UNIVERSIDAD AUTÓNOMA CHAPINGO</option>
+            <option value="11_A2M">UNIVERSIDAD AUTÓNOMA METROPOLITANA</option>
+          </select>
+        </div>
+      </div>
+      <div id="botonera" style="background-image: url(barra.jpg); background-size: 100% auto; margin-bottom:10px; ">
+        <img src="iconos/barra/todos_los_iconos_on.png" class="boton" id="b_0" name="0" title="Enciende / apaga todos">
+        <img src="iconos/barra/gobierno_on.png" class="boton" id="b_1" name="1" title="Gobierno">
+        <img src="iconos/barra/seguridad_on.png" class="boton" id="b_2" name="2" title="Seguridad">
+        <img src="iconos/barra/desarrollo_social_on.png" class="boton" id="b_3" name="3" title="Desarrollo Social">
+        <img src="iconos/barra/agricultura_on.png" class="boton" id="b_4" name="4" title="Agricultura, Ganadería, Desarrollo Rural, Pesca y Alimentación">
+        <img src="iconos/barra/telecom_on.png" class="boton" id="b_5" name="5" title="Comunicaciones y Transportes">
+        <img src="iconos/barra/desarrollo_econo_on.png" class="boton" id="b_6" name="6" title="Desarrollo económico">
+        <img src="iconos/barra/educacion_on.png" class="boton" id="b_7" name="7" title="Educación">
+        <img src="iconos/barra/salud_on.png" class="boton" id="b_8" name="8" title="Salud">
+        <img src="iconos/barra/medio_ambiente_on.png" class="boton" id="b_9" name="9" title="Medio Ambiente">
+        <img src="iconos/barra/energia_on.png" class="boton" id="b_10" name="10" title="Energía">
+        <img src="iconos/barra/turismo_on.png" class="boton" id="b_11" name="11" title="Turismo">
+        <img src="iconos/barra/icon_as_pub_pri_on.png" class="boton" id="b_12" name="12" title="Asociación Público-Privada">
+        </div>
+    </div>
+  </div>
+
+  <div id="bot_ocultos" style="visibility:hidden">
+    <img class="imagen_i" style=" border-right:#999 1px solid; margin-right:10px;" src="iconos/barra/todos_los_iconos_off.png">
+    <img class="imagen_i" src="iconos/barra/agricultura_off.png">
+    <img class="imagen_i" src="iconos/barra/desarrollo_econo_off.png">
+    <img class="imagen_i" src="iconos/barra/desarrollo_social_off.png">
+    <img class="imagen_i" src="iconos/barra/educacion_off.png">
+    <img class="imagen_i" src="iconos/barra/energia_off.png">
+    <img class="imagen_i" src="iconos/barra/gobierno_off.png">
+    <img class="imagen_i" src="iconos/barra/medio_ambiente_off.png">
+    <img class="imagen_i" src="iconos/barra/salud_off.png">
+    <img class="imagen_i" src="iconos/barra/seguridad_off.png">
+    <img class="imagen_i" src="iconos/barra/telecom_off.png">
+    <img class="imagen_i" src="iconos/barra/turismo_off.png">
+    <img class="imagen_i" src="iconos/barra/icon_as_pub_pri_off.png">
+    <img class="imagen_i" style=" border-right:#999 1px solid; margin-right:10px;" src="iconos/barra/todos_los_iconos_on.png">
+    <img class="imagen_i" src="iconos/barra/agricultura_on.png">
+    <img class="imagen_i" src="iconos/barra/desarrollo_econo_on.png">
+    <img class="imagen_i" src="iconos/barra/desarrollo_social_on.png">
+    <img class="imagen_i" src="iconos/barra/educacion_on.png">
+    <img class="imagen_i" src="iconos/barra/energia_on.png">
+    <img class="imagen_i" src="iconos/barra/gobierno_on.png">
+    <img class="imagen_i" src="iconos/barra/medio_ambiente_on.png">
+    <img class="imagen_i" src="iconos/barra/salud_on.png">
+    <img class="imagen_i" src="iconos/barra/seguridad_on.png">
+    <img class="imagen_i" src="iconos/barra/telecom_on.png">
+    <img class="imagen_i" src="iconos/barra/turismo_on.png">
+    <img class="imagen_i" src="iconos/barra/icon_as_pub_pri_on.png">
+    <input type="hidden" id="eStart" value="0">
+    <input type="hidden" id="eEnd" value="11">
+  </div>
 </div>
