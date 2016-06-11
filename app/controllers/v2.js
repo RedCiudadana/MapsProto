@@ -1,8 +1,30 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
-  currentLatitude: 14.569668,
-  currentLongitude: -90.497174,
-  currentZoom: 13,
-  currentEscuela: null
+  currentLatitude: 15.850389275322584,
+  currentLongitude: -89.6099853515625,
+  currentZoom: 8,
+  currentEscuela: null,
+  currentDepartamento: null,
+
+  currentEscuelas: Ember.computed('currentDepartamento', function() {
+    let escuelas = this.get('model').get('escuelas');
+
+    if (!this.get('currentDepartamento')) {
+      return escuelas;
+    }
+
+    return escuelas.filterBy(
+      'normalizedState',
+      this.get('currentDepartamento').toLowerCase()
+    );
+  }),
+
+  actions: {
+    updateCenter(e) {
+      let center = e.target.getCenter();
+      this.set('currentLatitude', center.lat);
+      this.set('currentLongitude', center.lng);
+    }
+  }
 });

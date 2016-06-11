@@ -70,10 +70,22 @@
 </div>
 
 <div class="medium" style=" height:720px; width:100%; background-color:#F4F4F4; margin:0 auto; ">
-
   {{!-- TODO: Agregar mapa --}}
-  {{#leaflet-map lat=currentLatitude lng=currentLongitude zoom=currentZoom classNames="right1"}}
+  {{#leaflet-map
+    lat=currentLatitude
+    lng=currentLongitude
+    zoom=currentZoom
+    classNames="right1"
+    onMoveend=(action "updateCenter")
+  }}
     {{tile-layer url="http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"}}
+
+    {{#each currentEscuelas as |escuela|}}
+      {{#marker-layer lat=escuela.latitude lng=escuela.longitude}}
+        <h3>{{escuela.Institution}}</h3>
+      {{/marker-layer}}
+    {{/each}}
+
   {{/leaflet-map}}
 
   <div>
