@@ -6,9 +6,10 @@ export default Ember.Controller.extend({
   currentZoom: 8,
   currentEscuela: null,
   currentDepartamento: null,
+  currentSearch: null,
 
-  currentEscuelas: Ember.computed('currentDepartamento', function() {
-    let escuelas = this.get('model').get('escuelas');
+  currentEscuelas: Ember.computed('currentDepartamento', 'currentSearch', function() {
+    let escuelas = this.get('model').escuelas;
 
     if (!this.get('currentDepartamento')) {
       return escuelas;
