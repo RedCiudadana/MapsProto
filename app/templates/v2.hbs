@@ -20,6 +20,8 @@
     <div class="dropdown">
       {{one-way-select
         currentDepartamento
+        includeBlank="Todos los departamentos"
+        promptIsSelectable=true
         options=departamentos
         update=(action (mut currentDepartamento))
         classNames="dropdown-select"

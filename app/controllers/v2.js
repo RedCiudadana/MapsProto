@@ -15,10 +15,12 @@ export default Ember.Controller.extend({
   //   'Huehuetenango'
   // ]),
   
-  departamentos: {
-    'dude': 'sup',
-    'dude2': 'sup2'
-  },
+  departamentos: Ember.A([
+    'Guatemala',
+    'El Progreso',
+    'Alta Verapaz',
+    'Huehuetenango'
+  ]),
 
   currentEscuelas: Ember.computed('currentDepartamento', 'currentSearch', function() {
     let escuelas = this.get('model').escuelas;
@@ -34,6 +36,10 @@ export default Ember.Controller.extend({
   }),
 
   actions: {
+    updateRegion() {
+      this.set('currentDepartamento', 'Alta verapaz');
+    },
+
     updateCenter(e) {
       let center = e.target.getCenter();
       this.set('currentLatitude', center.lat);
